@@ -1,0 +1,17 @@
+<div class="face-snap-card">
+    <h2>{{ faceSnap.title }}</h2>
+    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+    <p>{{ faceSnap.description }}</p>
+    <figure>
+        <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+        <figcaption *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</figcaption>
+    </figure>
+    <div class="face-snap-options">
+        <button (click)="onManageSnap()" [ngStyle]="{ 'background-color': hasSnapped ? '#dd8826' :  '#1ce760'}">{{
+            buttonLabel
+            }}</button>
+        <div>
+            <mat-icon>waving_hand</mat-icon> {{ faceSnap.snaps }}
+        </div>
+    </div>
+</div>

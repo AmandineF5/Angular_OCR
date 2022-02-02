@@ -1,0 +1,39 @@
+.face-snap-card {
+    width: 35%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px 30px;
+    box-shadow: lightgray 4px 4px 20px;
+    border-radius: 3%;
+    img {
+        width: 70%;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    p  {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    button {
+        background-color: transparent;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border: none;
+        box-shadow: lightblue 3px 3px 7px;
+        margin-right: 20px;
+        outline: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &:active {
+        transform: translate(1px, 1px);
+        box-shadow: lightblue 0 0 5px;
+    }
+}
+
+.face-snap-options{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}

@@ -1,0 +1,34 @@
+h1, h2, p{
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.face-snap-card {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.snaps-btn {
+  background-color: rgb(228, 231, 231);
+  box-sizing: border-box;
+  border-radius: 6%;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: lightblue 3px 3px 7px;
+  margin: 10px;
+  outline: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.center-btn {
+  text-align: center;
+}

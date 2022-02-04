@@ -1,0 +1,27 @@
+<h1>Welcome to SnapFace !</h1>
+<div class='center-btn'>
+    <button class='snaps-btn' (click)="goToSnaps()">See the snaps</button>
+</div>
+<p>See your statistics :</p>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Number of posts</th>
+            <th scope="col">Number of snaps given</th>
+            <th scope="col">Number of snaps received</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">{{statistic.postNumber}}</td>
+            <td>{{statistic.snapsGiven}}</td>
+            <td>{{statistic.snapsReceived}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Most snapped post:</h2>
+<div class="face-snap-card">
+    <app-face-snap [faceSnap]='statistic.mostSnapped' [readOnlyMode]='true'></app-face-snap>
+</div>

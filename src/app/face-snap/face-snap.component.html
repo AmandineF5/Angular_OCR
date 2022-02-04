@@ -8,7 +8,7 @@
     </figure>
     <div class="face-snap-options">
         <button (click)="onManageSnap(faceSnap.id)"
-            [ngStyle]="{ 'background-color': hasSnapped ? '#dd8826' :  'rgb(209, 235, 228)'}">{{
+            [ngStyle]="{ 'background-color': hasSnapped ? '#dd8826' :  'rgb(209, 235, 228)'}" *ngIf="!readOnlyMode">{{
             buttonLabel
             }}</button>
         <div>

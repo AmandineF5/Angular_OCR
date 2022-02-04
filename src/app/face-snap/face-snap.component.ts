@@ -10,6 +10,7 @@ import { FaceSnapsService } from '../services/face-snaps.service';
 })
 export class FaceSnapComponent implements OnInit {
   @Input() faceSnap!: FaceSnap;
+  @Input() readOnlyMode!: boolean;
 
   constructor(private faceSnapService: FaceSnapsService) { }
 
@@ -17,17 +18,16 @@ export class FaceSnapComponent implements OnInit {
   hasSnapped: boolean = false;
 
   ngOnInit(): void {
-
-    this.buttonLabel = 'oh snap!';
+    this.buttonLabel = 'Snap!';
   }
 
   onManageSnap(id: number) {
     if (!this.hasSnapped) {
       this.faceSnapService.snapByFaceSnapId(id, SnapType.SNAP);
-      this.buttonLabel = 'Oops un snap!';
+      this.buttonLabel = 'Unsnap!';
     } else {
       this.faceSnapService.snapByFaceSnapId(id, SnapType.UNSNAP);
-      this.buttonLabel = 'oh snap!';
+      this.buttonLabel = 'Snap!';
     }
     this.hasSnapped = !this.hasSnapped;
   }

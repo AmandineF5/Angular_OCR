@@ -1,6 +1,32 @@
 header {
     text-align: center;
     background-color: rgb(209, 235, 228);
-    margin-bottom: 20px;
-    padding: 10px;
+    padding-top: 20px;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+a {
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.active {
+    color: rgb(180, 98, 16);
+    text-decoration: underline;
 }

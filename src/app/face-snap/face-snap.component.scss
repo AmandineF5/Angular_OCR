@@ -28,13 +28,12 @@
         font-weight: bold;
     }
     &:active {
-        transform: translate(1px, 1px);
         box-shadow: lightblue 0 0 5px;
     }
 }
 
 .face-snap-options{
     display: flex;
-    width: 50%;
+    width: auto;
     justify-content: space-around;
 }

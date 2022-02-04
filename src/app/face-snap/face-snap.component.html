@@ -1,11 +1,13 @@
 <div class="face-snap-card">
-    <h2>{{ faceSnap.title | titlecase }}</h2>
-    <p>Mis en ligne le {{ faceSnap.createdDate | date:'dd/MM/yy, à HH:mm'}}</p>
-    <p>{{ faceSnap.description }}</p>
-    <figure>
-        <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
-        <figcaption *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</figcaption>
-    </figure>
+    <a routerLink="{{faceSnap.id}}">
+        <h2>{{ faceSnap.title | titlecase }}</h2>
+        <p>Mis en ligne le {{ faceSnap.createdDate | date:'dd/MM/yy, à HH:mm'}}</p>
+        <p>{{ faceSnap.description }}</p>
+        <figure>
+            <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+            <figcaption *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</figcaption>
+        </figure>
+    </a>
     <div class="face-snap-options">
         <button (click)="onManageSnap(faceSnap.id)"
             [ngStyle]="{ 'background-color': hasSnapped ? '#dd8826' :  'rgb(209, 235, 228)'}" *ngIf="!readOnlyMode">{{
